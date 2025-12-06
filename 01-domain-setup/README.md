@@ -3,28 +3,25 @@ Deploy a Windows Server 2022 machine and run Active Directory with OU architectu
 
 
 ## 🏗️ Architecture and Design 
-* VM running Windows Server 2022
+* VM running Windows Server 2022:
   * NIC1 is operating in NAT mode, which is configured automatically by VirtualBox. This enables access to the Internet. 
   * NIC2 is operating in Internal Network mode. This serves as an isolated AD LAN for the clients. 
-      
 * VM running Windows 11 Pro
   * NIC is operating in Internal Network mode, which will connect to the local domain.
   <img width="951" height="514" alt="image" src="https://github.com/user-attachments/assets/55821e4c-1f83-4ad6-afdc-d2f588b9662d" />
 
  
 ## ⚙️ Actions
-* Promoted server to Domain Controller (via "Add Roles and Features" -> "Install Active Directory Domain Services")
-  * Added a new forest called lab.local
-
-* Created the OU structure
-  * Top-level OUs were created for CorpUsers, CorpComputers, and Servers
-  * OUs were added within these for IT, HR, Sales, Support, Laptops, and Workstations
-  * Users were added with simple password configuration for lab and testing purposes. 
- <img width="285" height="242" alt="image" src="https://github.com/user-attachments/assets/2926d2b1-6816-4e94-9fbc-78ea0018c77c" />
-
+* Promoted server to Domain Controller (via "Add Roles and Features" -> "Install Active Directory Domain Services").
+  * Added a new forest called lab.local.
+* Created the OU structure:
+  * Top-level OUs were created for CorpUsers, CorpComputers, and Servers.
+  * OUs were added within these for IT, HR, Sales, Support, Laptops, and Workstations.
+  * Users were added with simple password configuration for lab and testing purposes.  
+   <img width="285" height="242" alt="image" src="https://github.com/user-attachments/assets/2926d2b1-6816-4e94-9fbc-78ea0018c77c" />
  
-* Joined the Windows client to the lab domain
-  * Settings -> System Properties -> Change domain or workgroup -> add the "lab.local" domain
+* Joined the Windows client to the lab domain:
+  * Settings -> System Properties -> Change domain or workgroup -> add the "lab.local" domain.
 
 
 ## 🚧 Problems Encountered
