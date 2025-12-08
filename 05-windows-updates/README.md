@@ -37,6 +37,7 @@ Implement both GPO-based and WSUS-based Windows Update management to simulate ho
 
 * Verification:
   * The WSUS server now shows the status of the client as "Updates installed/not applicable: 124 - 100%". This indicates the client successfully scanned the server and is now 100% compliant.
+    
     <img width="392" height="253" alt="image" src="https://github.com/user-attachments/assets/7c8451ef-2cd2-47f8-8669-506a38ba21c3" />
 
 
